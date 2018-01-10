@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChatList from './ChatList';
 import EmojiSelector from "./EmojiSelector"
+import './ChatWindow.css';
 
 class ChatWindow extends Component {
 
@@ -18,7 +19,8 @@ class ChatWindow extends Component {
         <h3>Stukent Chat App</h3>
         <ChatList items={this.state.items}/>
         <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} value={this.state.text} />
+          <input onChange={this.handleChange} value={this.state.text}
+                 className="ChatInput"/>
           <button>{'Send'}</button>
         </form>
         <EmojiSelector onSelect={this.handleEmojiSelect}/>

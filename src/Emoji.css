@@ -1,13 +1,23 @@
 .EmojiSelector {
   display: flex;
   flex-wrap: wrap;
-  max-width: 400px;
   max-height: 350px;
   overflow: scroll;
+  margin-top: 10px;
+
+  /* center-align */
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
 }
 
 .Emoji {
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+.Emoji:hover {
+  background-color: #A9A9A9;
+  border-radius: 5px;
 }
