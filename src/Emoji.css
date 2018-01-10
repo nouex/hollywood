@@ -1,0 +1,13 @@
+.EmojiSelector {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+  max-height: 350px;
+  overflow: scroll;
+}
+
+.Emoji {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}

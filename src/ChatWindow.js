@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChatList from './ChatList';
+import EmojiSelector from "./EmojiSelector"
 
 class ChatWindow extends Component {
 
@@ -7,6 +8,7 @@ class ChatWindow extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleEmojiSelect = this.handleEmojiSelect.bind(this)
     this.state = {items: [], text: ''};
   }
 
@@ -19,8 +21,15 @@ class ChatWindow extends Component {
           <input onChange={this.handleChange} value={this.state.text} />
           <button>{'Send'}</button>
         </form>
+        <EmojiSelector onSelect={this.handleEmojiSelect}/>
       </div>
     );
+  }
+
+  handleEmojiSelect(emoji) {
+    this.setState((prevState, props) => ({
+      text: prevState.text + emoji
+    }))
   }
 
   handleChange(e) {
